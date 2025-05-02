@@ -14,7 +14,7 @@ export const parameters = {
       },
       {
         name: 'dark',
-        value: theme.colors.mainBg
+        value: theme.colors.darkBlue
       }
     ]
   }
@@ -28,4 +28,5 @@ export const decorators = [
     </ThemeProvider>
   )
 ]
+
 export const tags = ['autodocs']
