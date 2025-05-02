@@ -14,6 +14,7 @@ const config: StorybookConfig = {
     config.resolve = config.resolve || {}
     config.resolve.alias = {
       ...(config.resolve?.alias || {}),
+      icons: path.resolve(__dirname, '../src/assets/icons'),
       components: path.resolve(__dirname, '../src/components'),
       styles: path.resolve(__dirname, '../src/styles')
     }
