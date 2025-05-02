@@ -40,10 +40,13 @@ export default {
     }
   },
   colors: {
+    primary: '#FFFFFF',
+    secondary: '#0F172A',
     orange: '#EA580C',
     darkBlue: '#0F172A',
     yellow: '#FACC15',
     white: '#FFFFFF',
+    black: '#000000',
     blue: '#2563EB',
     lightOrange: '#FB923C',
     blueGray: '#475569',
