@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react'
-import ArrowRightIcon from '@/assets/icons/arrowRight'
 
+import ArrowRightIcon from '@/assets/icons/arrow'
 import { renderWithTheme } from 'utils/tests/helpers'
 
 import Button from '.'

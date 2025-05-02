@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
 
-import ArrowRightIcon from 'assets/icons/arrowRight'
+import ArrowRightIcon from '@/assets/icons/ArrowRight'
 
 import Button from '.'
 

@@ -1,3 +1,5 @@
+'use client'
+
 import styled, { css, DefaultTheme } from 'styled-components'
 
 import { ButtonProps } from '.'
@@ -51,7 +53,7 @@ export const wrapperModifiers = {
 
     &:hover {
       color: ${theme.colors.white};
-      background-color: ${theme.colors.darkGray};
+      background-color: ${theme.colors.darkBlue};
     }
   `,
 
@@ -65,10 +67,9 @@ export const wrapperModifiers = {
   `,
 
   minimal: (theme: DefaultTheme) => css`
-    color: ${theme.colors.blue};
     background-color: transparent;
     border: 0;
-    padding: calc(${theme.spacings.xxsmall} * 2) 0;
+    padding: ${theme.spacings.xsmall} ${theme.spacings.xxsmall};
 
     &:hover {
       color: ${theme.colors.darkGray};
