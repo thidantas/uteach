@@ -17,6 +17,7 @@ export default {
     semiBold: 700,
     bold: 800,
     sizes: {
+      xxsmall: '0.8rem',
       xsmall: '1.2rem',
       small: '1.4rem',
       medium: '1.6rem',
