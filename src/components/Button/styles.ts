@@ -84,6 +84,7 @@ export const wrapperModifiers = {
 
   right: () => css`
     flex-direction: row-reverse;
+    justify-content: flex-end;
   `
 }
 

@@ -13,7 +13,7 @@ export type ButtonProps = {
   color?: 'primary' | 'secondary' | 'outlined'
   minimal?: boolean
   position?: 'left' | 'right'
-  children: React.ReactNode
+  children?: React.ReactNode
   as?: React.ElementType
 } & ButtonTypes
 
