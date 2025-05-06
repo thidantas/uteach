@@ -1,7 +1,5 @@
-import * as React from 'react'
-
-import { SvgIconProps } from 'types/types'
 import theme from 'styles/theme'
+import { SvgIconProps } from 'types/types'
 
 export type LogoIconProps = {
   props?: SvgIconProps

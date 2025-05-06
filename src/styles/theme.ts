@@ -2,16 +2,18 @@ export default {
   grid: {
     container: '144rem',
     columnGutter: '3.2rem',
-    containerGutter: '6.4rem'
+    containerGutter: '8.0rem'
   },
   border: {
     borderRadiusSmall: '0.8rem',
     borderRadiusMedium: '1.0rem',
-    borderRadiusLarge: '2.0rem'
+    borderRadiusLarge: '2.0rem',
+    borderRadiusXLarge: '5.0rem'
   },
   font: {
     family:
       "Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    small: 300,
     normal: 400,
     medium: 500,
     semiBold: 700,
@@ -25,7 +27,8 @@ export default {
       xlarge: '2.0rem',
       xxlarge: '2.4rem',
       xxxlarge: '3.2rem',
-      huge: '5.6rem'
+      huge: '5.6rem',
+      xhuge: '7.2rem'
     }
   },
   icon: {
@@ -50,7 +53,9 @@ export default {
     black: '#000000',
     blue: '#2563EB',
     blueGray: '#E2E8F0',
+    blueGray600: '#475569',
     lightOrange: '#FB923C',
+    lightGray: '#A6A6A6',
     darkGray: '#2E2F42'
   },
   spacings: {
@@ -62,6 +67,7 @@ export default {
     large: '4.0rem',
     xlarge: '4.8rem',
     xxlarge: '5.6rem',
-    huge: '8.0rem'
+    huge: '8.0rem',
+    xhuge: '9.0rem'
   }
 } as const

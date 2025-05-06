@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { SvgIconProps } from 'types/types'
 
 const GlobeIcon = (props: SvgIconProps) => (

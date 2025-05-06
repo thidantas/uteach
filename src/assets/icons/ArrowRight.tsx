@@ -1,5 +1,3 @@
-import * as React from 'react'
-
 import { SvgIconProps } from 'types/types'
 
 const ArrowRightIcon = (props: SvgIconProps) => (
