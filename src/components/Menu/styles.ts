@@ -61,6 +61,6 @@ export const MenuGroup = styled.div`
     flex-grow: 1;
     justify-content: flex-end;
     align-items: center;
-    gap: calc(${theme.spacings.xxsmall});
+    gap: calc(${theme.spacings.xxsmall} * 2);
   `}
 `
