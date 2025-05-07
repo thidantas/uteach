@@ -52,6 +52,13 @@ export const NavContent = styled.div`
   `}
 `
 
+export const AccessibilityLink = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    gap: ${theme.spacings.xxsmall};
+  `}
+`
+
 export const Column = styled.section`
   ${({ theme }) => css`
     padding: ${theme.spacings.xxsmall} 0;
@@ -76,6 +83,8 @@ export const Nav = styled.nav`
     flex-direction: column;
 
     a {
+      width: fit-content;
+      height: fit-content;
       text-decoration: none;
       color: ${theme.colors.blueGray};
       font-size: ${theme.font.sizes.medium};
@@ -124,6 +133,8 @@ export const SupportSection = styled.div`
     gap: ${theme.spacings.medium};
 
     a {
+      width: fit-content;
+      height: fit-content;
       text-decoration: none;
       color: ${theme.colors.blueGray};
       font-size: ${theme.font.sizes.medium};
