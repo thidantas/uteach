@@ -81,7 +81,11 @@ Check out the [Next.js deployment documentation](https://nextjs.org/docs/pages/b
 
   ### Desktop
 
-  https://github.com/user-attachments/assets/8506148b-7981-4f8f-a1c9-525b8b92229b
+
+
+https://github.com/user-attachments/assets/b78dc82c-ffd0-4ac3-8a4a-361389dc8641
+
+
 
  ### Mobile 
 
