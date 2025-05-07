@@ -1,6 +1,7 @@
 'use client'
 
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 type WrapperProps = {
   color: string
@@ -18,5 +19,10 @@ export const Wrapper = styled.div<WrapperProps>`
     background-color: ${background};
     color: ${color};
     font-weight: ${theme.font.normal};
+
+    ${media.lessThan('medium')`
+      width: 7.1rem;
+      height: ${theme.spacings.xmedium}
+      `}
   `}
 `

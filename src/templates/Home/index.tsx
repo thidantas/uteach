@@ -13,7 +13,6 @@ import Company5Icon from 'assets/icons/Company5'
 import CheckIcon from 'assets/icons/Check'
 import ArrowRightIcon from 'assets/icons/ArrowRight'
 import Player from 'assets/images/Player'
-import Blob from 'assets/images/Blob'
 import Stars from 'assets/images/Stars'
 import LikeHeartIcon from 'assets/icons/LikeHeart'
 import DiamondIcon from 'assets/icons/Diamond'
@@ -34,6 +33,7 @@ import ReviewHighlightSlider from 'components/ReviewHighlightSlider'
 import CustomDotsCarousel from 'components/CustomDotsCarousel'
 import SubmitProjectForm from 'components/SubmitProjectForm'
 import Footer from 'components/Footer'
+import MediaMatch from 'components/MediaMatch'
 
 import * as S from './styles'
 
@@ -72,6 +72,7 @@ export default function Home() {
                 Eleifend proin massa tincidunt viverra lectus pulvinar.
                 <br /> Nunc ipsum est pellentesque turpis ultricies.
               </S.TeachSectionLeftParagraph>
+
               <S.TeachSectionLeftButtons>
                 <Button size="xxlarge" bold>
                   Sign Up Now
@@ -90,10 +91,12 @@ export default function Home() {
                 </Button>
               </S.TeachSectionLeftButtons>
             </S.TeachSectionLeftContent>
+
             <S.TeachLeftSectionBelow>
               <S.TeachLeftSectionBelowCompanies>
                 Trusted by
-                <br /> leading companies
+                <MediaMatch greaterThan="medium"> </MediaMatch> leading
+                companies
               </S.TeachLeftSectionBelowCompanies>
               <S.TeachLeftSectionBelowIcons>
                 <Company1Icon />
@@ -105,12 +108,13 @@ export default function Home() {
             </S.TeachLeftSectionBelow>
           </S.TeachSectionLeft>
           <S.TeachSectionRight>
-            <Image
-              src="images/teach-students.svg"
-              alt="image of people studying"
-              width={624.6}
-              height={544.53}
-            />
+            <S.ImageContainer>
+              <S.StyledImage
+                src="images/teach-students.svg"
+                alt="image of people studying"
+                fill
+              />
+            </S.ImageContainer>
           </S.TeachSectionRight>
         </S.TeachSection>
       </Container>
@@ -127,23 +131,36 @@ export default function Home() {
               An all-in-one app that makes it easier
             </Heading>
 
+            <S.MoreAboutLessDescription>
+              Sit elit feugiat turpis sed integer integer accumsan turpis. Sed
+              suspendisse nec lorem mauris. Pharetra, eu imperdiet ipsum
+              ultrices amet, dui sit suspendisse.
+            </S.MoreAboutLessDescription>
+
             <div>
               <S.MoreAboutLeftSectionParagraph>
-                <CheckIcon />
+                <S.MoreAboutIconWrapper>
+                  <CheckIcon />
+                </S.MoreAboutIconWrapper>
                 <S.MoreAboutParagraph>
                   Est et in pharetra magna adipiscing ornare aliquam.
                 </S.MoreAboutParagraph>
               </S.MoreAboutLeftSectionParagraph>
 
               <S.MoreAboutLeftSectionParagraph>
-                <CheckIcon />
+                <S.MoreAboutIconWrapper>
+                  <CheckIcon />
+                </S.MoreAboutIconWrapper>
+
                 <S.MoreAboutParagraph>
                   Tellus arcu sed consequat ac velit ut eu blandit.
                 </S.MoreAboutParagraph>
               </S.MoreAboutLeftSectionParagraph>
 
               <S.MoreAboutLeftSectionParagraph>
-                <CheckIcon />
+                <S.MoreAboutIconWrapper>
+                  <CheckIcon />
+                </S.MoreAboutIconWrapper>
                 <S.MoreAboutParagraph>
                   Ullamcorper ornare in et egestas dolor orci.
                 </S.MoreAboutParagraph>
@@ -161,12 +178,13 @@ export default function Home() {
               Find more about the app
             </Button>
           </S.MoreAboutLeftSectionContent>
+
           <S.MoreAboutCenterSection>
             <Stars />
           </S.MoreAboutCenterSection>
 
           <S.MoreAboutBlobSection>
-            <Blob />
+            <S.ResponsiveBlob />
           </S.MoreAboutBlobSection>
 
           <S.MoreAboutRightSection>
@@ -248,12 +266,13 @@ export default function Home() {
       <Container>
         <S.MeetSection>
           <S.ImagesMeet>
-            <Image
-              src={'images/international-students.svg'}
-              alt="people students from different cultures"
-              width={600}
-              height={651}
-            />
+            <S.MeetImageContainer>
+              <S.StyledImage
+                src={'images/international-students.svg'}
+                alt="people students from different cultures"
+                fill
+              />
+            </S.MeetImageContainer>
           </S.ImagesMeet>
 
           <S.MeetDescription>
@@ -280,6 +299,7 @@ export default function Home() {
               semiBold
               as="a"
               href="#"
+              size="large"
             >
               Explore teachers and students
             </Button>
@@ -475,12 +495,22 @@ export default function Home() {
 
       <S.SignUpNowSection>
         <S.SignUpNowAvatarFirstGroup>
-          <Image
-            src="images/avatar-first-group.svg"
-            alt="user profile mosaic"
-            width={439}
-            height={637}
-          />
+          <MediaMatch greaterThan="medium">
+            <Image
+              src="images/avatar-first-group.svg"
+              alt="user profile mosaic"
+              width={439}
+              height={637}
+            />
+          </MediaMatch>
+          <MediaMatch lessThan="medium">
+            <Image
+              src="images/avatar-first-group-row.svg"
+              alt="user profile mosaic"
+              width={361}
+              height={167}
+            />
+          </MediaMatch>
         </S.SignUpNowAvatarFirstGroup>
 
         <Container>
@@ -499,28 +529,38 @@ export default function Home() {
         </Container>
 
         <S.SignUpNowAvatarSecondGroup>
-          <Image
-            src="images/avatar-second-group.svg"
-            alt="user profile mosaic"
-            width={467}
-            height={636}
-          />
+          <MediaMatch greaterThan="medium">
+            <Image
+              src="images/avatar-second-group.svg"
+              alt="user profile mosaic"
+              width={467}
+              height={636}
+            />
+          </MediaMatch>
+
+          <MediaMatch lessThan="medium">
+            <Image
+              src="images/avatar-second-group-row.svg"
+              alt="user profile mosaic"
+              width={361}
+              height={167}
+            />
+          </MediaMatch>
         </S.SignUpNowAvatarSecondGroup>
       </S.SignUpNowSection>
+
       <S.NextProjectSection>
         <Container>
           <S.NextProjectWrapper>
             <Heading color="white" as="h2">
-              Ready for your next project?{' '}
+              Ready for your next project?
             </Heading>
 
             <S.NextProjectDescription>
               Sit elit feugiat turpis sed integer integer accumsan turpis.
             </S.NextProjectDescription>
 
-            <div>
-              <SubmitProjectForm />
-            </div>
+            <SubmitProjectForm />
           </S.NextProjectWrapper>
         </Container>
       </S.NextProjectSection>

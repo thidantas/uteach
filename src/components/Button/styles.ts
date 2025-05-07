@@ -3,6 +3,7 @@
 import styled, { css, DefaultTheme } from 'styled-components'
 
 import { ButtonProps } from '.'
+import media from 'styled-media-query'
 
 export type WrapperProps = { hasIcon: boolean } & Pick<
   ButtonProps,
@@ -20,6 +21,18 @@ export const wrapperModifiers = {
 
   large: (theme: DefaultTheme) => css`
     font-size: ${theme.font.sizes.xlarge};
+
+    ${media.lessThan('medium')`
+      font-size: ${theme.font.sizes.medium};
+      `}
+  `,
+
+  xxlarge: (theme: DefaultTheme) => css`
+    font-size: ${theme.font.sizes.xxlarge};
+
+    ${media.lessThan('medium')`
+      font-size: ${theme.font.sizes.medium};
+      `}
   `,
 
   primary: (theme: DefaultTheme) => css`
@@ -88,6 +101,11 @@ export const wrapperModifiers = {
     padding: calc(${theme.spacings.xxsmall} * 2) 0;
     width: fit-content;
 
+    ${media.lessThan('medium')`
+      padding:${theme.spacings.xxsmall} 0;
+      width: auto;
+      `}
+
     span {
       width: fit-content;
     }
@@ -117,15 +135,8 @@ export const Wrapper = styled.button<WrapperProps>`
     align-items: center;
     justify-content: center;
     font-family: ${theme.font.family};
-    font-size: ${theme.font.sizes[size!]};
     line-height: ${theme.font.sizes.xxlarge};
     text-decoration: none;
-    width: 23.9rem;
-    height: 6.4rem;
-
-    span {
-      width: 19.1rem;
-    }
 
     ${!!bold &&
     css`
@@ -137,6 +148,11 @@ export const Wrapper = styled.button<WrapperProps>`
       font-weight: ${theme.font.medium};
     `}
 
+    ${media.lessThan('medium')`
+      padding: 1.6rem 1.6rem;
+      `}
+
+    ${!!size && wrapperModifiers[size](theme)}
     ${!!color && wrapperModifiers[color](theme)}
     ${!!hasIcon && wrapperModifiers.withIcon(theme, size)}
     ${!!minimal && wrapperModifiers.minimal(theme)}
