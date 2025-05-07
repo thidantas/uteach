@@ -1,8 +1,8 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const SliderContainer = styled.div`
   width: 100%;
-
   margin: 0 auto;
   padding: 1rem 0;
 
@@ -48,7 +48,7 @@ export const SliderContainer = styled.div`
 
   .slick-dots {
     position: absolute;
-    top: 530px;
+    top: 520px;
     left: 82px;
     display: block;
     width: fit-content;
@@ -151,4 +151,18 @@ export const SliderContainer = styled.div`
       width: 100%;
     }
   }
+
+  ${media.lessThan('medium')`
+    width: 45rem;
+
+  .slick-prev,
+  .slick-next {
+    display: none;
+  }
+
+  .slick-dots {
+    top: 438px;
+    left: 45px;
+  }
+    `}
 `

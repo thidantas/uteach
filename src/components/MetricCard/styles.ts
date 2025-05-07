@@ -1,6 +1,7 @@
 'use client'
 
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -10,6 +11,10 @@ export const Wrapper = styled.div`
     flex-direction: column;
     gap: calc(${theme.spacings.xxsmall} * 2);
     color: ${theme.colors.yellow};
+
+    ${media.lessThan('medium')`
+      width: 36.1rem;
+      `}
   `}
 `
 
@@ -18,6 +23,10 @@ export const Value = styled.h1`
     font-size: ${theme.font.sizes.xhuge};
     font-weight: ${theme.font.bold};
     line-height: 1.1;
+
+    ${media.lessThan('medium')`
+      font-size: calc(${theme.font.sizes.xxlarge} * 2);
+    `}
   `}
 `
 
@@ -26,5 +35,9 @@ export const Label = styled.p`
     font-size: ${theme.font.sizes.xxlarge};
     font-weight: ${theme.font.normal};
     line-height: 1.6;
+
+    ${media.lessThan('medium')`
+      font-size: calc(${theme.font.sizes.medium});
+      `}
   `}
 `

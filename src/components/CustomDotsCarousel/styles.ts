@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -8,12 +9,21 @@ export const Wrapper = styled.div`
   width: 1280px;
   height: 41.5rem;
 
+  ${media.lessThan('medium')`
+  padding: 4.8rem 0;
+  width: 100%;
+    `}
+
   .slick-slider {
     position: relative;
   }
 
   .slick-current {
     height: 744.14px;
+
+    ${media.lessThan('medium')`
+      height: auto;
+      `}
   }
 
   .slick-prev,
@@ -26,14 +36,6 @@ export const Wrapper = styled.div`
   .slick-next:hover {
     background: none;
   }
-`
-
-export const Content = styled.div`
-  display: flex;
-`
-
-export const QuoteBlock = styled.div`
-  margin: 4.5rem 0;
 `
 
 type ArrowProps = {
@@ -63,5 +65,9 @@ export const ArrowWrapper = styled.div<ArrowProps>`
           : `${theme.colors.white}`};
       }
     }
+
+    ${media.lessThan('medium')`
+      display: none;
+      `}
   `}
 `

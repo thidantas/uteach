@@ -1,13 +1,20 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  ${media.lessThan('medium')`
+    width: 100%;
+    max-width: 36.1rem;
+  `}
 `
 
 export const Form = styled.form`
   display: flex;
+
   flex-direction: column;
   align-items: center;
 `
@@ -26,6 +33,7 @@ export const Label = styled.label`
 
 export const Input = styled.input`
   ${({ theme }) => css`
+    display: flex;
     width: 55rem;
     height: 5rem;
     border: none;
@@ -51,10 +59,15 @@ export const Input = styled.input`
       color: ${theme.colors.lightGray};
     }
   `}
+
+  ${media.lessThan('medium')`
+    width: 36.1rem;
+  `}
 `
 
 export const TextArea = styled.textarea`
   ${({ theme }) => css`
+    display: flex;
     resize: none;
     border: none;
     border-radius: ${theme.border.borderRadiusMedium};
@@ -78,5 +91,9 @@ export const TextArea = styled.textarea`
       font-family: ${theme.font.family};
       color: ${theme.colors.lightGray};
     }
+
+    ${media.lessThan('medium')`
+    width: 36.1rem;
+  `}
   `}
 `

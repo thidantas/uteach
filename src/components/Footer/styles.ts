@@ -3,6 +3,7 @@
 import styled, { css } from 'styled-components'
 
 import * as ButtonStyles from 'components/Button/styles'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.footer`
   ${ButtonStyles.Wrapper} {
@@ -21,6 +22,10 @@ export const Wrapper = styled.footer`
     padding-top: ${theme.spacings.xlarge};
     padding-bottom: ${theme.spacings.xsmall};
     flex-direction: column;
+
+    ${media.lessThan('medium')`
+      padding-bottom: ${theme.spacings.xmedium};
+    `}
   `}
 `
 
@@ -40,6 +45,10 @@ export const LogoWrapper = styled.div`
     svg {
       height: ${theme.icon.sizes.xxxlarge};
     }
+
+    ${media.lessThan('medium')`
+      display: none;
+    `}
   `}
 `
 
@@ -49,6 +58,13 @@ export const NavContent = styled.div`
     grid-template-columns: repeat(5, 1fr);
     gap: ${theme.spacings.xlarge};
     width: 83.4%;
+
+    ${media.lessThan('medium')`
+      grid-template-columns: none;
+      grid-template-rows: 3.2rem repeat(5, 1fr);
+      gap: ${theme.spacings.medium};
+      width: 100%;
+      `}
   `}
 `
 
@@ -62,7 +78,6 @@ export const AccessibilityLink = styled.div`
 export const Column = styled.section`
   ${({ theme }) => css`
     padding: ${theme.spacings.xxsmall} 0;
-
     flex-direction: row;
     gap: ${theme.spacings.xmedium};
   `}
@@ -113,6 +128,12 @@ export const WrapperCopyright = styled.div`
   width: 100%;
   justify-content: space-between;
   align-items: center;
+
+  ${media.lessThan('medium')`
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2.5rem;
+  `}
 `
 
 export const Copyright = styled.div`
@@ -128,7 +149,6 @@ export const Copyright = styled.div`
 export const SupportSection = styled.div`
   ${({ theme }) => css`
     display: flex;
-
     padding: ${theme.spacings.xsmall} 0;
     gap: ${theme.spacings.medium};
 
@@ -139,13 +159,17 @@ export const SupportSection = styled.div`
       color: ${theme.colors.blueGray};
       font-size: ${theme.font.sizes.medium};
       font-weight: ${theme.font.normal};
-      line-height: 140%;
+      line-height: 1.4;
       gap: ${theme.spacings.xxsmall};
     }
 
     a:hover {
       text-decoration: underline;
     }
+
+    ${media.lessThan('medium')`
+     flex-wrap: wrap;
+    `}
   `}
 `
 
@@ -155,5 +179,11 @@ export const WrapperIcon = styled.div`
   svg {
     width: 2rem;
     height: 2rem;
+  }
+`
+
+export const MediaWrapperLogo = styled.div`
+  svg {
+    height: 3.5rem;
   }
 `

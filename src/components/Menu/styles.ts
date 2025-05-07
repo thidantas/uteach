@@ -1,6 +1,8 @@
 'use client'
 
 import styled, { css } from 'styled-components'
+import Button from '../Button'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
@@ -8,10 +10,17 @@ export const Wrapper = styled.main`
     align-items: center;
     padding: ${theme.spacings.xmedium} 0;
     width: 100%;
+
+    ${media.lessThan('medium')`
+      padding: calc(${theme.spacings.xxsmall} * 2 );
+      `}
   `}
 `
 
-export const LogoWrapper = styled.div``
+export const LogoWrapper = styled.div`
+  svg {
+  }
+`
 
 export const MenuNav = styled.nav`
   ${({ theme }) => css`
@@ -56,11 +65,33 @@ export const MenuLink = styled.a`
 `
 
 export const MenuGroup = styled.div`
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: center;
+`
+
+export const MenuGroupButtons = styled.div`
   ${({ theme }) => css`
     display: flex;
-    flex-grow: 1;
-    justify-content: flex-end;
-    align-items: center;
     gap: calc(${theme.spacings.xxsmall} * 2);
+  `}
+`
+
+export const NavDrawerWrapper = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    color: ${theme.colors.darkBlue};
+
+    svg {
+      color: inherit;
+    }
+  `}
+`
+
+export const CustomDrawerButton = styled(Button)`
+  ${({ theme }) => css`
+    width: fit-content;
+    color: ${theme.colors.darkBlue};
   `}
 `

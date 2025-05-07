@@ -1,14 +1,23 @@
 import styled, { css, DefaultTheme } from 'styled-components'
 
 import { HeadingProps } from '.'
+import media from 'styled-media-query'
 
 export const wrapperModifiers = {
   huge: (theme: DefaultTheme) => css`
     font-size: ${theme.font.sizes.huge};
+
+    ${media.lessThan('medium')`
+      font-size: ${theme.font.sizes.xxlarge}
+    `}
   `,
 
   xhuge: (theme: DefaultTheme) => css`
     font-size: ${theme.font.sizes.xhuge};
+
+    ${media.lessThan('medium')`
+      font-size: calc(${theme.font.sizes.xlarge} * 2)
+    `}
   `
 }
 
@@ -20,19 +29,23 @@ export const Wrapper = styled.h1<WrapperProps>`
     font-weight: ${theme.font.bold};
     line-height: 1.2;
     ${!!size && wrapperModifiers[size](theme)};
+
+    ${media.lessThan('medium')`
+    font-weight: ${theme.font.semiBold};}
+    `}
   `}
 `
 
 export const Highlight = styled.span`
   position: relative;
-  display: inline-block;
+  display: inline-flex;
 
   &::after {
     content: '';
     position: absolute;
-    bottom: -0.1rem;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(50%);
     width: 100%;
     height: 2.4rem;
     background: url("data:image/svg+xml,%3Csvg width='196' height='23' viewBox='0 0 196 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 9C25.5 6.5 116.5 1.63771 191 9C152.328 9 101.942 9.74446 69.5 17.5' stroke='%23FB923C' stroke-width='10' stroke-linejoin='round'/%3E%3C/svg%3E")
@@ -40,6 +53,10 @@ export const Highlight = styled.span`
     background-size: contain;
     pointer-events: none;
     z-index: -1;
+
+    ${media.lessThan('medium')`
+      height: 1.2rem;
+    `}
   }
 `
 
@@ -65,5 +82,11 @@ export const IconAbove = styled.span`
     background-size: contain;
     pointer-events: none;
     z-index: -1;
+
+    ${media.lessThan('medium')`
+      width: 3.2rem;
+      height: 3.2rem;
+      top: -2.15rem;
+    `}
   }
 `

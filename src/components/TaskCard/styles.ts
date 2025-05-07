@@ -3,6 +3,7 @@
 import styled, { css } from 'styled-components'
 
 import Button from 'components/Button'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -17,6 +18,11 @@ export const Wrapper = styled.div`
     box-shadow:
       0 0 10px rgba(0, 0, 0, 0.07),
       0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+    ${media.lessThan('medium')`
+        width: 16rem;
+        height: 23.2rem;
+      `}
   `}
 `
 
@@ -39,6 +45,13 @@ export const CustomButton = styled(Button)`
     width: 16.833rem;
     height: ${theme.spacings.large};
 
+    ${media.lessThan('medium')`
+      font-size: ${theme.font.sizes.small};
+      padding: ${theme.spacings.xxsmall} 2.2rem;
+      width: 12.8rem;
+      height: ${theme.spacings.large};
+    `}
+
     &:hover {
       color: ${theme.colors.white};
       background: ${theme.colors.blue};
@@ -54,6 +67,10 @@ export const Description = styled.p`
     font-size: ${theme.font.sizes.small};
     line-height: 1.4;
     font-weight: ${theme.font.normal};
+
+    ${media.lessThan('medium')`
+      font-size: ${theme.font.sizes.xsmall};
+    `}
   `}
 `
 
@@ -62,5 +79,9 @@ export const Title = styled.h3`
     font-size: ${theme.font.sizes.xlarge};
     font-weight: ${theme.font.medium};
     line-height: 1.1;
+
+    ${media.lessThan('medium')`
+      font-size: ${theme.font.sizes.medium};
+    `}
   `}
 `

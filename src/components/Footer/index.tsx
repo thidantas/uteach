@@ -9,15 +9,23 @@ import ArrowRight from 'assets/icons/ArrowRight'
 import Accessibility from 'assets/icons/Accessibility'
 
 import * as S from './styles'
+import MediaMatch from '../MediaMatch'
 
 const Footer = () => (
   <S.Wrapper>
     <S.FooterLinksArea>
       <S.LogoWrapper>
-        <Logo invertFill />
+        <MediaMatch greaterThan="medium">
+          <Logo invertFill />
+        </MediaMatch>
       </S.LogoWrapper>
 
       <S.NavContent>
+        <MediaMatch lessThan="medium">
+          <S.Column>
+            <Logo invertFill />
+          </S.Column>
+        </MediaMatch>
         <S.Column aria-labelledby="product-heading">
           <S.Header id="product-heading">Product</S.Header>
 
@@ -32,7 +40,6 @@ const Footer = () => (
             </S.AccessibilityLink>
           </S.Nav>
         </S.Column>
-
         <S.Column aria-labelledby="solutions-heading">
           <S.Header id="solutions-heading">Soluctions</S.Header>
 
@@ -43,7 +50,6 @@ const Footer = () => (
             <Link href="#">Research</Link>
           </S.Nav>
         </S.Column>
-
         <S.Column aria-labelledby="resources-heading">
           <S.Header id="resources-heading">Resources</S.Header>
 
@@ -54,7 +60,6 @@ const Footer = () => (
             <Link href="#">FAQS</Link>
           </S.Nav>
         </S.Column>
-
         <S.Column aria-labelledby="support-heading">
           <S.Header id="support-heading">Support</S.Header>
 
@@ -65,7 +70,6 @@ const Footer = () => (
             <Link href="#">Integration</Link>
           </S.Nav>
         </S.Column>
-
         <S.Column aria-labelledby="company-heading">
           <S.Header id="company-heading">Company</S.Header>
 

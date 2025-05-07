@@ -16,6 +16,7 @@ export type ReviewHighlightSliderProps = {
 const settings: SliderSettings = {
   infinite: false,
   arrows: false,
+
   speed: 500,
   slidesToShow: 3.2,
   slidesToScroll: 1,
@@ -25,8 +26,8 @@ const settings: SliderSettings = {
       settings: { slidesToShow: 2 }
     },
     {
-      breakpoint: 600,
-      settings: { slidesToShow: 1 }
+      breakpoint: 768,
+      settings: { slidesToShow: 1.2 }
     }
   ]
 }
