@@ -25,7 +25,7 @@ const Menu = () => (
       <Button minimal color="outlined" aria-label="log in">
         Log In
       </Button>
-      <Button color="outlined" aria-label="sign up now">
+      <Button color="outlined" aria-label="sign up now" semiBold>
         Sign Up Now
       </Button>
     </S.MenuGroup>

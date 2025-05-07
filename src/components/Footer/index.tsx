@@ -1,11 +1,12 @@
 import Link from 'next/link'
 
-import Logo from 'assets/icons/Logo'
+import Tag from 'components/Tag'
 import Eur from 'assets/icons/Eur'
+import Logo from 'assets/icons/Logo'
 import Globe from 'assets/icons/Globe'
+import Button from 'components/Button'
 import ArrowRight from 'assets/icons/ArrowRight'
 import Accessibility from 'assets/icons/Accessibility'
-import Button from 'components/Button'
 
 import * as S from './styles'
 
@@ -24,7 +25,11 @@ const Footer = () => (
             <Link href="#">Pricing</Link>
             <Link href="#">Overview</Link>
             <Link href="#">Browse</Link>
-            <Link href="#">Accessibility</Link>
+
+            <S.AccessibilityLink>
+              <Link href="#">Accessibility</Link>
+              <Tag tagType="beta" />
+            </S.AccessibilityLink>
           </S.Nav>
         </S.Column>
 

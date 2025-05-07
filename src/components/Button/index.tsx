@@ -8,9 +8,10 @@ type ButtonTypes =
 
 export type ButtonProps = {
   icon?: React.ReactNode
-  size?: 'small' | 'medium' | 'large'
+  size?: 'small' | 'medium' | 'large' | 'xxlarge'
   bold?: boolean
-  color?: 'primary' | 'secondary' | 'outlined'
+  semiBold?: boolean
+  color?: 'primary' | 'secondary' | 'thirdy' | 'outlined'
   minimal?: boolean
   position?: 'left' | 'right'
   children?: React.ReactNode
@@ -21,6 +22,7 @@ const Button = ({
   icon,
   size = 'medium',
   bold = false,
+  semiBold = false,
   color = 'primary',
   minimal = false,
   position = 'right',
@@ -31,6 +33,7 @@ const Button = ({
     size={size}
     color={color}
     bold={bold}
+    semiBold={semiBold}
     hasIcon={!!icon}
     minimal={minimal}
     position={position}
