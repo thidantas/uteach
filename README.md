@@ -77,3 +77,17 @@ Check out the [Next.js deployment documentation](https://nextjs.org/docs/pages/b
 - This project was developed as part of a challenge proposed by the company Buzzvel.
 
 
+ ## Preview
+
+  ### Desktop
+
+  https://github.com/user-attachments/assets/8506148b-7981-4f8f-a1c9-525b8b92229b
+
+ ### Mobile 
+
+
+ https://github.com/user-attachments/assets/ff4e494e-0f78-4b36-afa8-2203569f976f
+
+
+
+
